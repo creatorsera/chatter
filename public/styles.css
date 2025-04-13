@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* Login Screen */
+#login-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #1c2526;
+}
+
+#login-screen h2 {
+  margin-bottom: 20px;
+}
+
+#login-screen input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+}
+
+#login-screen button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #1d9bf0;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Chat Interface */
+#chat-container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 300px;
+  background: #1c2526;
+  padding: 20px;
+  border-right: 1px solid #333;
+}
+
+.sidebar h3 {
+  margin: 0 0 20px;
+}
+
+#search-user {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#user-list {
+  list-style: none;
+  padding: 0;
+}
+
+#user-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#user-list li:hover {
+  background: #333;
+}
+
+.chat-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 20px;
+  border-bottom: 1px solid #333;
+}
+
+#messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message.sent {
+  align-items: flex-end;
+}
+
+.message.received {
+  align-items: flex-start;
+}
+
+.message-bubble {
+  max-width: 60%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.message.sent .message-bubble {
+  background: #1d9bf0;
+}
+
+.message.received .message-bubble {
+  background: #333;
+}
+
+.message .timestamp {
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+.typing-indicator {
+  padding: 10px 20px;
+  color: #aaa;
+  font-style: italic;
+}
+
+.message-input {
+  display: flex;
+  padding: 20px;
+  border-top: 1px solid #333;
+}
+
+#message-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+}
+
+.message-input button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #1d9bf0;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 150px;
+  }
+  .message-bubble {
+    max-width: 80%;
+  }
+}
